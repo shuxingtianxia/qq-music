@@ -8,25 +8,48 @@
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import "./assets/reset.min.css";
+import "./assets/basic.less";
+// import "swiper/css/swiper.css";
+export default {};
+</script>
+
+<style lang="less" scoped>
+.video-enter-active {
+  transition: 0.5s;
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.video-enter {
+  transform: translate(-100%);
+}
+.video-enter-to {
+  transform: translateX(0);
+}
+.video-leave-active {
+  transition: 0.5s;
+}
+.video-leave {
+  opacity: 1;
+}
+.video-leave-to {
+  opacity: 0;
+}
+.song-enter-active {
+  transition: 0.5s;
+}
+.song-enter {
+  opacity: 0;
+}
+.song-enter-to {
+  opacity: 1;
+}
+.song-leave-active {
+  transition: 0.5s;
+}
+.song-leave {
+  transform: translateX(0);
+}
+.song-leave-to {
+  transform: translateX(-100%);
 }
 </style>
